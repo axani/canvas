@@ -2,6 +2,7 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('AppCtrl', function ($scope) {
     $scope.testVar = 'hello world';
+    $scope.boxes = [];
 
     // Show ContextMenu
         var timeoutID = 0;
@@ -17,6 +18,11 @@ myApp.controller('AppCtrl', function ($scope) {
         var boxType = $(this).attr('data-add-type');
         posY = $('.contextmenu').css('top');
         posX = $('.contextmenu').css('left');
-        $('.canvas').append('<div class="box ' + boxType + '" style="top: ' + posY + '; left: ' + posX + '" contenteditable></div>');
+        $scope.boxes.push({'type': boxType, 'posX': posX, 'posY': posY, 'content': ''});
+        console.log($scope.boxes);
+        $scope.$apply()
+        // $('.canvas').append('<div class="box ' + boxType + '" style="top: ' + posY + '; left: ' + posX + '" contenteditable></div>');
     });
+
+
 });

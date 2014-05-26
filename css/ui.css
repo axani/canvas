@@ -12,6 +12,7 @@
 }
 
 .contextmenu {
+    background-color: white;
     border: 1px solid black;
     padding: 5px;
     display: inline-block;
@@ -21,6 +22,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    z-index: 99;
 }
 
 .add-box {
@@ -32,10 +34,25 @@
     position: absolute;
 }
 
+.image-area, .text-area {
+    display: none;
+}
+
 .boxtype-text {
     background-color: yellow;
 }
 
+.boxtype-text > .text-area {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    background-color: white;
+}
+
 .boxtype-image {
     background-color: red;
+}
+
+.boxtype-image > .image-area {
+    display: block;
 }

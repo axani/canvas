@@ -21,10 +21,14 @@
     }
 
     .box {
-        min-width: 100px;
+        min-width: 200px;
         max-width: 300px;
-        min-height: 100px;
+        min-height: 250px;
         padding: 10px;
+    }
+
+    .boxtype-image > img {
+        max-width: 100%;
     }
 
 </style>
@@ -34,6 +38,14 @@
         <div class="contextmenu">
             <a class="add-box" data-add-type="boxtype-text">Add Text</a> |
             <a class="add-box" data-add-type="boxtype-image">Add Image</a>
+        </div>
+        <div class="box {{box.type}}" style="top: {{box.posY}}; left: {{box.posX}}" data-ng-repeat="box in boxes">
+            <div class="text-area" contenteditable>
+            </div>
+            <div class="image-area">
+                <input type="text" data-ng-model="imagelink"></input><br>
+                <img src="{{imagelink}}">
+            </div>
         </div>
     </div>
 </body>
