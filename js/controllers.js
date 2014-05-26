@@ -17,6 +17,6 @@ myApp.controller('AppCtrl', function ($scope) {
         var boxType = $(this).attr('data-add-type');
         posY = $('.contextmenu').css('top');
         posX = $('.contextmenu').css('left');
-        $('.canvas').append('<div style="top: ' + posY + '; left: ' + posX + '" class="box ' + boxType + '"></div>');
+        $('.canvas').append('<div class="box ' + boxType + '" style="top: ' + posY + '; left: ' + posX + '" contenteditable></div>');
     });
 });
