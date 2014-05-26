@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+[data-ng-click] {
+    cursor: pointer;
+}
+
+.canvas {
+    position: relative;
+}
+
+.contextmenu {
+    border: 1px solid black;
+    padding: 5px;
+    display: inline-block;
+    display: none;
+    position: absolute;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.add-box {
+    cursor: pointer;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.boxtype-text {
+    background-color: yellow;
+}
+
+.boxtype-image {
+    background-color: red;
+}

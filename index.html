@@ -4,15 +4,30 @@
 <meta charset="utf-8" />
 <title>Angular Starterkit</title>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="js/controllers.js"></script>
+
+<link rel="stylesheet" href="css/_reset.css">
+<link rel="stylesheet" href="css/ui.css">
 
 </head>
 
 <style>
-/* CSS */
+    /* CSS */
+
+    .canvas {
+        width: 2000px;
+        height: 2000px;
+    }
+
 </style>
 
 <body data-ng-controller="AppCtrl">
-{{ testVar}}
+    <div class="canvas">
+        <div class="contextmenu">
+            <a class="add-box" data-add-type="boxtype-text">Add Text</a> |
+            <a class="add-box" data-add-type="boxtype-image">Add Image</a>
+        </div>
+    </div>
 </body>
 </html>
